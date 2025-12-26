@@ -70,6 +70,13 @@ Event Hub (Telemetry Simulator)
 
 ---
 
+## Impact
+- Scalable structured streaming ingestion handling continuous telemetry events
+- Near real-time, analytics-ready datasets exposed via Synapse Serverless SQL
+- Fault-tolerant design using checkpointing and schema enforcement with Delta Lake
+
+---
+
 ## Design Decisions
 - Event-time processing with watermarking is used to handle late-arriving data.
 - Delta Lake is used to ensure ACID guarantees and support upserts.
