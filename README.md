@@ -52,10 +52,17 @@ Event Hub (Telemetry Simulator)
 ---
 
 ## Repository Structure
-- simulator/     - Event Hub telemetry producer
-- databricks/    - Streaming ingestion and transformation notebooks
-- synapse/       - Synapse external tables and view definitions (SQL)
-- README.md
+
+- `simulator.py` – Event Hub telemetry producer
+- `01_bronze_ingestion.py` – Bronze layer streaming ingestion
+- `02_silver_vehicle_transformations.py` – Silver layer cleansing and transformations
+- `03a_gold_avg_speed.py` – Gold layer average speed aggregation
+- `03b_gold_max_engine_temp.py` – Gold layer max engine temperature aggregation
+- `03c_gold_event_count.py` – Gold layer event count aggregation
+- `04_gold_delta_tables.py` – Delta table creation for Gold layer
+- `gold_external_tables_views.sql` – Synapse external tables and view definitions
+- `adls_config.py` – ADLS and storage configuration
+- `README.md` – Project documentation
 
 ---
 
